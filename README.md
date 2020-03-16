@@ -1,3 +1,3 @@
-# Analysis of the Titanic dataset
+# Time Series Analysis of the Google's Historical Stock Data
 
-This projects aims at analysing Kaggle's Titanic dataset and build a predictive model for the Titanic data science challenge.
+This projects aims at analysing historical stock data to predict future closing price.
