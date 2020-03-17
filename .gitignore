@@ -1,8 +1,12 @@
 # CSV data files
 *.csv
+/tests/validation_data/*.csv
 
 # Compiled python modules
 *.pyc
 
 # Python egg metadata, regenerated from source files by setuptools
 *.egg-info
+
+# scripts to generate validation data
+tests/validation_data/getIPO.py 
