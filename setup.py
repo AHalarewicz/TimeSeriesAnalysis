@@ -37,5 +37,9 @@ setup(
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
+    entry_points='''
+        [console_scripts]
+        fetch_raw_data=timeseries.command_line:fetch_raw_data
+    '''
 
 )

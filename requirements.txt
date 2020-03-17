@@ -4,7 +4,7 @@ backcall==0.1.0
 bleach==3.1.1
 certifi==2019.11.28
 chardet==3.0.4
-click==7.1.1
+Click==7.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
@@ -64,7 +64,7 @@ Send2Trash==1.5.0
 six==1.14.0
 terminado==0.8.3
 testpath==0.4.4
--e git+https://github.com/AHalarewicz/TimeSeriesAnalysis.git@3d58459ab911f31d14f5a4446c6220c7df89bccf#egg=timeseries
+-e git+https://github.com/AHalarewicz/TimeSeriesAnalysis.git@3a2225167f0af5e2b8e2053068a171eefd66e991#egg=timeseries
 tornado==6.0.4
 traitlets==4.3.3
 urllib3==1.25.8

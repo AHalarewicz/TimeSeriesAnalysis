@@ -1,35 +1,35 @@
 import logging
 import pandas as pd
-from titanic import data, models
+from timeseries import fetch
+from datetime import datetime
 
 
-def run_titanic_analysis(filename):
-    """Data pipeline and predictions.
-    Parameters
-    ----------
-    filename: str
-        Path to the Titanic CSV input data
+def run_fetch_raw_data():
+    
+    """ 
+    Get raw data from yfinance and 
     """
 
-    logging.info('Starting the data analysis pipeline')
+    logging.info('Fetching raw data from yfinance')
+    
+    
+    # Define Constants
+    TICKER = "GOOG"
+    START = "2004-08-19" # Google IPO date
+    TODAY = datetime.date(datetime.now()).strftime("%Y-%m-%d")
+    OUTPUT_FILE_NAME = "raw.csv"
+    OUTPUT_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/" + OUTPUT_FILE_NAME
 
-    processed_data = (
-        pd.read_csv(filename, usecols=['Name', 'Sex', 'Age', 'Survived'])
-        .pipe(lambda df: df.fillna({'Age': df.Age.median(), }))
-        .pipe(lambda df: df.astype({'Age': 'float64',
-                                    'Name': 'object',
-                                    'Sex': 'category',
-                                    'Survived': 'int64'}))
-        .pipe(data.extract_title)
-    )
+    # get all current google stock data
+    stock_data = fetch.get_historical_data(TICKER, START, TODAY)
 
-    X_train, X_test, y_train, y_test = models.data_preparation(processed_data,
-                                                               test_size=0.2,
-                                                               random_state=0)
+    # log population of csv file
+    logging.info("Writing yfinance data to " + OUTPUT_FILE_PATH)
+    print("Writing yfinance data to " + OUTPUT_FILE_PATH)
 
-    models.run_majority_vote(X_train, X_test, y_train, y_test)
-    models.run_logistic_regression(X_train, X_test, y_train, y_test)
-
-    logging.info('The data analysis pipeline has terminated')
-
+    # write data to csv
+    stock_data.to_csv(OUTPUT_FILE_PATH)
+    
     return
+    
+    

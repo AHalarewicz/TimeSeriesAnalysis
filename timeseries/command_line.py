@@ -1,7 +1,7 @@
 import sys
 import logging
 import click
-from titanic import pipelines
+from timeseries import pipelines
 
 logging.basicConfig(
     format='[%(asctime)s|%(module)s.py|%(levelname)s]  %(message)s',
@@ -10,11 +10,12 @@ logging.basicConfig(
     stream=sys.stdout
 )
 
-@click.command()
-@click.option('--filename',
-              type=click.Path(exists=True),
-              prompt='Path to the Google Stock CSV file',
-              help='Path to the Google Stock CSV file')
+# if you want to provide a filepath as a command line argument
+#@click.command()
+#@click.option('--filename',
+#              type=click.Path(exists=True),
+#              prompt='Path to the Google Stock CSV file',
+#              help='Path to the Google Stock CSV file')
 
-#def titanic_analysis(filename):
-#    pipelines.run_titanic_analysis(filename)
+def fetch_raw_data():
+    pipelines.run_fetch_raw_data()
