@@ -3,8 +3,6 @@ setup.cfg
 setup.py
 timeseries/__init__.py
 timeseries/command_line.py
-timeseries/data.py
-timeseries/models.py
 timeseries/pipelines.py
 timeseries.egg-info/PKG-INFO
 timeseries.egg-info/SOURCES.txt
