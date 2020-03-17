@@ -64,7 +64,7 @@ Send2Trash==1.5.0
 six==1.14.0
 terminado==0.8.3
 testpath==0.4.4
--e git+https://github.com/AHalarewicz/TimeSeriesAnalysis.git@e16c59043ae628f6fa1d19236f9ea81d692c3053#egg=timeseries
+-e git+https://github.com/AHalarewicz/TimeSeriesAnalysis.git@3d58459ab911f31d14f5a4446c6220c7df89bccf#egg=timeseries
 tornado==6.0.4
 traitlets==4.3.3
 urllib3==1.25.8
