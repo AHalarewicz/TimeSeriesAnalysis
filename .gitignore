@@ -9,4 +9,7 @@
 *.egg-info
 
 # scripts to generate validation data
-tests/validation_data/getIPO.py 
+tests/validation_data/getIPO.py
+
+# iPython notebook checkpoint files
+notebooks/.ipynb_checkpoints/* 
