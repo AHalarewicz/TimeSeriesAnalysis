@@ -4,7 +4,7 @@ from timeseries import fetch
 from datetime import datetime
 
 
-def run_fetch_raw_data():
+def run_fetch_raw_data(ticker='GOOG'):
     
     """ 
     Get raw data from yfinance and 
@@ -14,8 +14,10 @@ def run_fetch_raw_data():
     
     
     # Define Constants
-    TICKER = "GOOG"
-    START = "2004-08-19" # Google IPO date
+    #TICKER = "GOOG"
+    TICKER = ticker
+    #START = "2004-08-19" # Google IPO date
+    START = "1900-01-01"
     TODAY = datetime.date(datetime.now()).strftime("%Y-%m-%d")
     OUTPUT_FILE_NAME = "raw.csv"
     OUTPUT_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/" + OUTPUT_FILE_NAME

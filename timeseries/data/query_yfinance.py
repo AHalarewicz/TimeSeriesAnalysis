@@ -7,8 +7,9 @@ import pandas as pd
 from timeseries import fetch
 
 # Define Constants
-TICKER = "GOOG"
-START = "2004-08-19" # Google IPO date
+#TICKER = "GOOG"
+TICKER = "XOM"
+START = "1900-01-01" # Google IPO date
 TODAY = datetime.date(datetime.now()).strftime("%Y-%m-%d")
 OUTPUT_FILE_NAME = "raw.csv"
 #OUTPUT_FILE_PATH = "../../data/raw/" + OUTPUT_FILE_NAME

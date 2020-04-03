@@ -16,6 +16,8 @@ logging.basicConfig(
 #              type=click.Path(exists=True),
 #              prompt='Path to the Google Stock CSV file',
 #              help='Path to the Google Stock CSV file')
+@click.command()
+@click.option('-t', '--ticker', 'ticker')
 
-def fetch_raw_data():
-    pipelines.run_fetch_raw_data()
+def fetch_raw_data(ticker):
+    pipelines.run_fetch_raw_data(ticker)

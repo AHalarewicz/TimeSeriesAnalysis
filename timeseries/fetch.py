@@ -2,7 +2,7 @@ import logging
 import yfinance as yf
 
 
-def get_historical_data(ticker="GOOG", start_date="2004-08-20", end_date="2004-08-27" ):
+def get_historical_data(ticker="GOOG", start_date="1900-01-01", end_date="2004-08-27" ):
     """
     Collect historical data from yfinance.
     
