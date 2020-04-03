@@ -33,7 +33,8 @@ setup(
         'matplotlib>=3.0.3',
         'pytest>=4.3.1',
         'pytest-runner>=4.4',
-        'click>=7.0'
+        'click>=7.0',
+        'bleach>=3.1.4'
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
