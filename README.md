@@ -9,7 +9,7 @@ A Recurrent Neural Network, implemented with TensorFlow, will be use to make imp
 # COMMAND LINE INSTRUCTIONS
 1. pip install -e .
 2. pip install -r requirements.txt
-3. fetch_raw_data GOOG
+3. fetch_raw_data -ticker GOOG
 4. format_timeseries
 
  
