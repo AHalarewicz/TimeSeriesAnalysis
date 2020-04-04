@@ -7,9 +7,11 @@ A Neural Network, implemented with keras, will be used to predict whether a stoc
 A Recurrent Neural Network, implemented with TensorFlow, will be use to make imporved predictions.
 
 # COMMAND LINE INSTRUCTIONS
-1. pip install -e .
-2. pip install -r requirements.txt
-3. fetch_raw_data -ticker GOOG
-4. format_timeseries
-
+From the TimeSeries/ directory
+1. $ pip install -e .
+2. $ pip install -r requirements.txt
+3. $ fetch_raw_data -ticker GOOG
+4. $ format_timeseries
+6. fit and predict RNN in 
+   TimeSeries/notebooks/keras_predictions.ipynb
  
