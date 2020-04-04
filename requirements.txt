@@ -89,6 +89,7 @@ tensorflow-estimator==2.1.0
 termcolor==1.1.0
 terminado==0.8.3
 testpath==0.4.4
+-e git+https://github.com/AHalarewicz/TimeSeriesAnalysis.git@91d3c38e638785aaa51b95eb995e5586c4b739b0#egg=timeseries
 tornado==6.0.4
 traitlets==4.3.3
 urllib3==1.25.8

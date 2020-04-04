@@ -34,4 +34,6 @@ def run_fetch_raw_data(ticker='GOOG'):
     
     return
     
+def run_format_timeseries():
+    print('formatting timeseries')
     

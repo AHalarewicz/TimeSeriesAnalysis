@@ -21,3 +21,6 @@ logging.basicConfig(
 
 def fetch_raw_data(ticker):
     pipelines.run_fetch_raw_data(ticker)
+    
+def format_timeseries():
+    pipelines.run_format_timeseries()
