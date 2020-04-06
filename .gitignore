@@ -12,4 +12,7 @@
 tests/validation_data/getIPO.py
 
 # iPython notebook checkpoint files
-notebooks/.ipynb_checkpoints/* 
+notebooks/.ipynb_checkpoints/*
+
+# h5 files of saved files
+*.h5 
