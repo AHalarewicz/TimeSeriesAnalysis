@@ -1,12 +1,15 @@
 README.md
 setup.cfg
 setup.py
+timeseries/BuildModel.py
 timeseries/__init__.py
+timeseries/bootstrap.py
 timeseries/command_line.py
 timeseries/data.py
 timeseries/fetch.py
 timeseries/pipelines.py
 timeseries/titanic_pipelines.py
+timeseries/wrangle.py
 timeseries.egg-info/PKG-INFO
 timeseries.egg-info/SOURCES.txt
 timeseries.egg-info/dependency_links.txt
