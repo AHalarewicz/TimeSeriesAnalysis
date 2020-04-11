@@ -8,7 +8,6 @@ timeseries/command_line.py
 timeseries/data.py
 timeseries/fetch.py
 timeseries/pipelines.py
-timeseries/titanic_pipelines.py
 timeseries/wrangle.py
 timeseries.egg-info/PKG-INFO
 timeseries.egg-info/SOURCES.txt
