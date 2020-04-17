@@ -42,6 +42,7 @@ setup(
         [console_scripts]
         fetch_raw_data=timeseries.command_line:fetch_raw_data
         format_timeseries=timeseries.command_line:format_timeseries
+        predict_tomorrow=timeseries.command_line:predict_tomorrow
     '''
 
 )

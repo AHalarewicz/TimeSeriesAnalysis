@@ -20,7 +20,13 @@ logging.basicConfig(
 @click.option('-t', '--ticker', 'ticker')
 
 def fetch_raw_data(ticker):
+    # collect historical stock data for the specified ticker
     pipelines.run_fetch_raw_data(ticker)
     
 def format_timeseries():
+    # format historical stock data into Time Series
     pipelines.run_format_timeseries()
+    
+def predict_tomorrow():
+    # train the model and predict tomorrow's change
+    pipelines.run_predict_tomorrow()

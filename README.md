@@ -10,11 +10,12 @@ A Recurrent Neural Network, implemented with TensorFlow, will be use to make imp
 From the TimeSeries/ directory
 1. $ pip install -e .
 2. $ pip install -r requirements.txt
-3. $ fetch_raw_data -ticker GOOG
+3. $ fetch_raw_data --ticker JPM
 
-   Several other ticker symbols that work well with the model include [BA, MCD, XOM, JPM]
+   Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
 
 4. $ format_timeseries
-6. fit and predict RNN in 
-   TimeSeries/notebooks/keras_predictions.ipynb
+5. $ predict_tomorrow
+
+    OR fit and predict RNN in TimeSeries/notebooks/LSTM_predictions.ipynb
  
