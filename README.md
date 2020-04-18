@@ -73,7 +73,7 @@ Install requirements > Download and Format data > Train the model > Make Predict
       mean pred:       1.0009
       median pred:     1.001
       percentile(1.0): 99.53
-      Predicting change in stock price with 50.592885% accuracy
+      Predicting change in stock price with 51.362398% accuracy
 
       Date              price_today  	price_tomorrow 	      Action               
       2020-04-15		90.790001      	90.926631    		BUY
