@@ -23,7 +23,7 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 ### 2. Install project specific environment requirements 
       $ pip install -r requirements.txt
       
-### 3. Download historical stock data specific to the provided ticker.
+### 3. Download historical stock data specific for the provided ticker.
       $ fetch_raw_data --ticker JPM
 
    Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
@@ -31,13 +31,14 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 ### 4. Prepare the data and format for Time Series Analysis.
       $ format_timeseries
 
-### 5. Train the Recurrent Neural Network and predict tomorrow's change (Buy or Sell
+### 5. Train the Recurrent Neural Network and predict tomorrow's change (Buy or Sell)
       $ predict_tomorrow
-      
+
+
  
- # Makefile for a quick and easy prediction on J.P. Morgan's stock ('JPM')
- ## To run all of the steps sequentially, simply run the make file.
- ### Install requirements > Download and Format data > Train the model > Make Predictions
+# Makefile for a quick and easy prediction on J.P. Morgan's stock ('JPM')
+## To run all of the steps sequentially, simply run the make file.
+### Install requirements > Download and Format data > Train the model > Make Predictions
  
       $ make prediction
       
