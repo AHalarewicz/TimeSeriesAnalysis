@@ -2,11 +2,10 @@
 
 This projects aims at analyzing historical stock data to predict future closing price while exhibiting good software engineering practices.
 
-A Recurrent Neural Network, implemented with keras, will be used to predict whether a stock's closing price will be higher or lower than the closing of the previous day.
+A Recurrent Neural Network, implemented with keras, will be used to predict whether a stock's closing price will be higher or lower than the closing price from the previous day.
 
-A Recurrent Neural Network, implemented with TensorFlow, will be use to make imporved predictions.
-A combination of Dense and LSTM (Long Short Term Memory) Layers are used to produce reduce.
-The model implements a Stochastic Gradient Descent algorithm to train the model on a training set consisting of stock data from days that are prior to all of the data points in the test set.
+A combination of fully connected Dense and LSTM (Long Short Term Memory) Layers are used to build a Sequential Keras model.
+The model implements a Stochastic Gradient Descent algorithm to train the model with a training set consisting of stock data from days that are prior to all of the data points in the test set.
 With Time Series Analysis, a model must be evaluated on its ability to make predictions on data points corresponding to dates after any and all data points in the training set. With this approach, the Recurrent Neural Network is scored on its ability to correctly predict the direction of change in the stock's Adjusted Closing Price.
 
 
@@ -62,3 +61,14 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
       $ jupyer notebook
       NAVIGATE TO: notebooks/LSTM_predictions.ipynb
 
+# Sample of Predictions 
+## January 2019 from the test set
+Arrow Direction: 
+
+      Indictates predicted direction of change in Adjusted Closing price
+      
+Arrow Color:
+
+      Green: Model Correctly predicted direction of change
+      Red: Model incorrectly predicted direction of change
+![model predictions](reports/change_predictions.png)
