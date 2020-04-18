@@ -61,8 +61,11 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
       $ jupyer notebook
       NAVIGATE TO: notebooks/LSTM_predictions.ipynb
 
-# Sample of Predictions 
-## January 2019 from the test set
+# Visualizing Predictions 
+## January 2019 Sample from the Test Set
+
+![model predictions](reports/change_predictions.png)
+
 Arrow Direction: 
 
       Indictates predicted direction of change in Adjusted Closing price
@@ -71,4 +74,6 @@ Arrow Color:
 
       Green: Model Correctly predicted direction of change
       Red: Model incorrectly predicted direction of change
-![model predictions](reports/change_predictions.png)
+      
+      
+
