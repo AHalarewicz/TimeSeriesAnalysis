@@ -31,19 +31,16 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 ### 4. Prepare the data and format for Time Series Analysis.
       $ format_timeseries
 
-### 5. Train the Recurrent Neural Network and predict tomorrow's change (Buy or Sell)
+### 5. Train the Recurrent Neural Network and predict tomorrow's change
       $ predict_tomorrow
+ Prediction will provided the expected change in price and insight about whether to Buy or Sell
 
-
- 
 # Makefile for a quick and easy prediction on J.P. Morgan's stock ('JPM')
-## To run all of the steps sequentially, simply run the make file.
-### Install requirements > Download and Format data > Train the model > Make Predictions
- 
-      $ make prediction
-      
-      
-      
+### To run all of the steps sequentially, simply run the make file.
+      $ make prediction    
+Install requirements > Download and Format data > Train the model > Make Predictions     
+
+
 # Jupyter Notebooks
 ## To execute code line by line, explore the jupyter notebooks
 ### 1. fetch raw data with yfinance from yahoo finance:
