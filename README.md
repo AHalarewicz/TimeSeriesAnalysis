@@ -61,6 +61,26 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
       $ jupyer notebook
       NAVIGATE TO: notebooks/LSTM_predictions.ipynb
 
+# Sample Output
+### Prediction Statistics and Tomorrow's prediction
+    
+      Epoch 1/2
+      9595/9595 [==============================] - 5s 503us/step - loss: 0.0196
+      Epoch 2/2
+      9595/9595 [==============================] - 2s 234us/step - loss: 0.0018
+
+      Prediction Quality:
+      min pred:        0.9908
+      max pred:        1.007
+      mean pred:       1.0009
+      median pred:     1.001
+      percentile(1.0): 99.53
+      Predicting change in stock price with 50.592885% accuracy
+
+      Date              price_today  	price_tomorrow 	      Action               
+      2020-04-15		90.790001      	90.926631    		BUY
+
+
 # Visualizing Predictions 
 ## January 2019 Sample from the Test Set
 
