@@ -93,5 +93,13 @@ Arrow Color:
       Green: Model Correctly predicted direction of change
       Red: Model incorrectly predicted direction of change
       
+# Report and Presentation slides
+### Formal written report:
+    reports/Capstone 2_Final_Report.pdf
+    
+### Presentation for technical audience
+    reports/Capstone 2_Final_Presentation.pdf
+        
+      
       
 
