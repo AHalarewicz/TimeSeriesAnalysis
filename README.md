@@ -7,7 +7,14 @@ A Recurrent Neural Network, implemented with keras, will be used to predict whet
 A Recurrent Neural Network, implemented with TensorFlow, will be use to make imporved predictions.
 
 # COMMAND LINE INSTRUCTIONS
+
+
 From the TimeSeries/ directory
+
+Simply run "$ make prediction" from the command line. 
+
+
+Or, build the model step by step from the command line:
 1. $ pip install -e .
 2. $ pip install -r requirements.txt
 3. $ fetch_raw_data --ticker JPM
