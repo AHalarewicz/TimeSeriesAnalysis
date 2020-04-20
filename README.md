@@ -16,7 +16,7 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
       $ python3 -m venv env
       $ source env/bin/activate
 
-### 1. Navigate to project directory and Install project modules 
+### 1. Navigate to the TimeSeries project directory and install project modules 
       $ cd TimeSeries/
       $ pip install -e .
 
@@ -33,17 +33,19 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 
 ### 5. Train the Recurrent Neural Network and predict tomorrow's change
       $ predict_tomorrow
- Prediction will provided the expected change in price and insight about whether to Buy or Sell
+
+Prediction will provided the expected change in price and insight about whether to Buy or Sell
 
 # Makefile for a quick and easy prediction on J.P. Morgan's stock ('JPM')
 ### To run all of the steps sequentially, simply run the make file.
       $ make prediction    
+
 Install requirements > Download and Format data > Train the model > Make Predictions     
 
 
 # Jupyter Notebooks
 ## To execute code line by line, explore the jupyter notebooks
-### 1. fetch raw data with yfinance from yahoo finance:
+### 1. Fetch raw data with yfinance from yahoo finance:
       $ python 3
       >>> import yfinance as yf
       >>> import pandas as pd
@@ -53,11 +55,13 @@ Install requirements > Download and Format data > Train the model > Make Predict
       
 ### 2. Wrangle data and Format for Time Series Predictions with a Recurrent Neural Network
       $ jupyter notebook
-      NAVIGATE TO: notebooks/data_wranglic.ipynb
+
+NAVIGATE TO: notebooks/data_wranglic.ipynb
       
 ### 3. Build, Train, and score RNN. The model will predict tomorrow's change in price and advise whether to Buy or Sell
       $ jupyer notebook
-      NAVIGATE TO: notebooks/LSTM_predictions.ipynb
+
+NAVIGATE TO: notebooks/LSTM_predictions.ipynb
 
 # Sample Output
 ### Prediction Statistics and Tomorrow's prediction
