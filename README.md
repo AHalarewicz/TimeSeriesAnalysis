@@ -100,10 +100,28 @@ Arrow Color:
 # Report and Presentation slides
 ### Formal written report:
     reports/Capstone 2_Final_Report.pdf
+    https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/reports/Capstone_2_Final_Report.pdf
     
 ### Presentation for technical audience
     reports/Capstone 2_Final_Presentation.pdf
+    https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/reports/Capstone%202_Final_Presentation.pdf
         
+# Important Files:
+### Collect and Format Data for Time Series Analysis
+      notebooks/data_wrangling.ipynb
+      https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/data_wrangling.ipynb
+      
+### Train RNN with LSTM Layers and Make Predictions (Regression)
+      notebooks/LSTM_predictions.ipynb
+      https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
+      
+### Train RNN with LSTM Layers and Make Predictions (Classification)
+      notebooks/LSTM_predictions.ipynb
+      https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
+     
+### Train RNN with Dense Layers and Make Predictions (Regression)
+      notebooks/LSTM_predictions.ipynb
+      https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
       
       
 
