@@ -15,23 +15,34 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
       $ python3 -m pip install --user virtualenv
       $ python3 -m venv env
       $ source env/bin/activate
+      
+### 1. Update/Install python to version 3.6 or greater
+      https://www.google.com/url?q=https://askubuntu.com/questions/1176270/couldnt-find-any-package-by-glob-python-3-7-0&sa=D&source=hangouts&ust=1594578813898000&usg=AFQjCNHg6Gzhj51qIEbHuLNvPJIhOmhT-A
+#### Or... use Conda to create virtual environment with python 3.6 (replace steps 0 and 1)
+      conda create --name tsenv python=3.6
+      conda activate ~/ananaconda/envs/tsenv
 
-### 1. Navigate to the TimeSeries project directory and install project modules 
-      $ cd TimeSeries/
-      $ pip install -e .
+### 2. Install TensorFlow
+      https://www.youtube.com/watch?v=6-eEpq7ChKg&t=163s
+      
+### 3. Navigate to the TimeSeriesAnalysis project directory and install project modules 
+      $ cd TimeSeriesAnalysis/
 
-### 2. Install project specific environment requirements 
+### 4. Install project specific environment requirements 
       $ pip install -r requirements.txt
       
-### 3. Download historical stock data specific for the provided ticker.
+### 5. Install project modules
+      $ pip install -e .
+      
+### 6. Download historical stock data specific for the provided ticker.
       $ fetch_raw_data --ticker JPM
 
    Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
 
-### 4. Prepare the data and format for Time Series Analysis.
+### 7. Prepare the data and format for Time Series Analysis.
       $ format_timeseries
 
-### 5. Train the Recurrent Neural Network and predict tomorrow's change
+### 8. Train the Recurrent Neural Network and predict tomorrow's change
       $ predict_tomorrow
 
 Prediction will provided the expected change in price and insight about whether to Buy or Sell
