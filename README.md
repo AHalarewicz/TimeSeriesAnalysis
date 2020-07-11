@@ -12,7 +12,7 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 # COMMAND LINE INSTRUCTIONS for a Production Level approach (Linux).
 
 ### 0. Make sure python 3.6 or greater is installed
-      $ pyton --version 
+      $ python --version 
 
 ### 1. Download and install Anaconda
       https://docs.anaconda.com/anaconda/install/linux/
