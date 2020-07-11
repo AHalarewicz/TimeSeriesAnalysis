@@ -9,40 +9,48 @@ The model implements a Stochastic Gradient Descent algorithm to train the model 
 With Time Series Analysis, a model must be evaluated on its ability to make predictions on data points corresponding to dates after any and all data points in the training set. With this approach, the Recurrent Neural Network is scored on its ability to correctly predict the direction of change in the stock's Adjusted Closing Price.
 
 
-# COMMAND LINE INSTRUCTIONS for a Production Level approach.
-### 0. Install pip and create new virtual environment (Linux)
-      $ python3 -m pip install --user --upgrade pip
-      $ python3 -m pip install --user virtualenv
-      $ python3 -m venv env
-      $ source env/bin/activate
-      
-### 1. Update/Install python to version 3.6 or greater
-      https://www.google.com/url?q=https://askubuntu.com/questions/1176270/couldnt-find-any-package-by-glob-python-3-7-0&sa=D&source=hangouts&ust=1594578813898000&usg=AFQjCNHg6Gzhj51qIEbHuLNvPJIhOmhT-A
-#### Or... use Conda to create virtual environment with python 3.6 (replace steps 0 and 1)
-      conda create --name tsenv python=3.6
-      conda activate ~/ananaconda/envs/tsenv
+# COMMAND LINE INSTRUCTIONS for a Production Level approach (Linux).
 
-### 2. Install TensorFlow
-      https://www.youtube.com/watch?v=6-eEpq7ChKg&t=163s
+### 0. Make sure python 3.6 or greater is installed
+      $ pyton --version 
+
+### 1. Download and install Anaconda
+      https://docs.anaconda.com/anaconda/install/linux/
       
-### 3. Navigate to the TimeSeriesAnalysis project directory and install project modules 
+### 2. Add 'conda' command to PATH.
+      $ export Path=~/anaconda3/bin:$PATH
+      
+### 3. Initialize Anaconda then close and restart the shell
+      $ conda init bash
+      
+### 4. Clone the TimeSeriesAnalysis project repository
+      $ git clone https://github.com/AHalarewicz/TimeSeriesAnalysis.git
+      
+### 5. Create and activate conda virtual environment
+      $ conda create --name tsenv python=3.6
+      $ conda activate ~/anaconda3/envs/tsenv
+      
+### 6. Install/upgrage pip to install requirements for the virtual environment
+      $ python3 -m pip install --user --upgrade pip  
+      
+### 7. Navigate to the TimeSeriesAnalysis project directory and install project modules 
       $ cd TimeSeriesAnalysis/
 
-### 4. Install project specific environment requirements 
+### 8. Install project specific environment requirements 
       $ pip install -r requirements.txt
       
-### 5. Install project modules
+### 9. Install project modules
       $ pip install -e .
       
-### 6. Download historical stock data specific for the provided ticker.
+### 10. Download historical stock data specific for the provided ticker.
       $ fetch_raw_data --ticker JPM
 
    Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
 
-### 7. Prepare the data and format for Time Series Analysis.
+### 11. Prepare the data and format for Time Series Analysis.
       $ format_timeseries
 
-### 8. Train the Recurrent Neural Network and predict tomorrow's change
+### 12. Train the Recurrent Neural Network and predict tomorrow's change
       $ predict_tomorrow
 
 Prediction will provided the expected change in price and insight about whether to Buy or Sell
