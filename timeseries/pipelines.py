@@ -30,7 +30,8 @@ def run_fetch_raw_data(ticker='GOOG'):
     START = "1900-01-01"
     TODAY = datetime.date(datetime.now()).strftime("%Y-%m-%d")
     OUTPUT_FILE_NAME = "raw.csv"
-    OUTPUT_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/" + OUTPUT_FILE_NAME
+    #OUTPUT_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/" + OUTPUT_FILE_NAME
+    OUTPUT_FILE_PATH = "./data/raw/" + OUTPUT_FILE_NAME
 
     # get all current google stock data
     stock_data = fetch.get_historical_data(TICKER, START, TODAY)
@@ -47,7 +48,7 @@ def run_fetch_raw_data(ticker='GOOG'):
 def run_format_timeseries():
     print('formatting timeseries')
     # raw data file path
-    RAW_DATA_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/raw.csv"
+    RAW_DATA_FILE_PATH = "./data/raw/raw.csv"
 
     # read csv data from
     raw_df = pd.read_csv(RAW_DATA_FILE_PATH, index_col=0, parse_dates=['Date'])
@@ -67,7 +68,7 @@ def run_format_timeseries():
         return df
 
     time_series_df = create_time_series(log_scaled_adj_close, 'Adj Close')
-    time_series_df.to_csv('~/springboard1/capstone2/TimeSeries/data/interim/time_series.csv')
+    time_series_df.to_csv('./data/interim/time_series.csv')
     #time_series_df.to_csv('../data/interim/time_series.csv')
     print('DONE')
 
@@ -75,7 +76,7 @@ def run_format_timeseries():
 def run_predict_tomorrow():
     # PREPARE DATA
     TEST_SIZE = 0.05
-    file_path = '~/springboard1/capstone2/TimeSeries/data/interim/time_series.csv'
+    file_path = './data/interim/time_series.csv'
 
     # read time series data
     time_series_df = BuildModel.read_data(file_path)
@@ -148,8 +149,8 @@ def run_predict_tomorrow():
     # save and load model
     save_model = False
     if save_model:
-        model.save('~/springboard1/capstone2/TimeSeries/models/keras_lstm.h5')
-        model = load_model('~/springboard1/capstone2/TimeSeries/models/keras_lstm.h5')
+        model.save('./models/keras_lstm.h5')
+        model = load_model('./models/keras_lstm.h5')
 
 
     # Make Predictions and interpret results
@@ -210,7 +211,7 @@ def run_predict_tomorrow():
 
     # read original Adj Close Data
     # read data with Adj Close Price
-    raw_data = pd.read_csv('~/springboard1/capstone2/TimeSeries/data/raw/raw.csv', index_col=['Date'])
+    raw_data = pd.read_csv('./data/raw/raw.csv', index_col=['Date'])
 
     # display a dataFrame providing insight to th user
     expected_return = float(exponential_tomorrow)

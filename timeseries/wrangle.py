@@ -11,7 +11,7 @@ def get_deltas(df):
     deltas = [vals[i+1] - vals[i] for i in range(len(vals)-1)]
     deltas.append(np.nan)
     df['Adj Close'] = deltas
-    df.to_csv('~/springboard1/capstone2/TimeSeries/data/processed/deltas.csv')
+    df.to_csv('./data/processed/deltas.csv')
     #df.to_csv('../data/processed/deltas.csv')
     return df, deltas
 
@@ -20,7 +20,7 @@ def scale_data(df):
     scaler = MinMaxScaler(feature_range = (0, 1))
     df['Adj Close'] = scaler.fit_transform(df[['Adj Close']])
     # save scaler to use later when interpretting predictions
-    joblib.dump(scaler, '~/springboard1/capstone2/TimeSeries/models/MinMaxScaler.save')
+    joblib.dump(scaler, './models/MinMaxScaler.save')
     #joblib.dump(scaler, '../models/MinMaxScaler.save')
     return df
 
