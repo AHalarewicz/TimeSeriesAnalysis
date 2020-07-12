@@ -11,18 +11,20 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 
 # COMMAND LINE INSTRUCTIONS for a Production Level approach (Linux).
 
-### 0. Make sure python 3 is installed
+### 0. Make sure python 3 is installed (This project uses version 3.7)
       $ python3 --version 
       
-### 1. Install/upgrage pip 
+### 1. Install/upgrage pip
+      (https://pip.pypa.io/en/stable/installing/)
+      $ sudo apt install python3-pip
       $ python3 -m pip install --user --upgrade pip  
       $ pip --version
       
 ### 2a. (option A) Create and activate virtual environment with 'virtualenv'
       Choose Option B if you have already have anaconda installed
       $ python3 -m pip install --user virtualenv
-      $ python3.7 -m venv tsenv
-            (if python3.7 is not recognize, follow this tutorial: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)ls
+      $ virtualenv --python=python3.7 tsenv
+            (if python3.7 is not recognized, follow this tutorial: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)ls
       $ source tsenv/bin/activate
       
 ### 2b. (option B - THE BETTER OPTION) Create and activate virtual environment with 'conda'
