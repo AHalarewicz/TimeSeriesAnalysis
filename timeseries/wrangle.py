@@ -1,4 +1,5 @@
 import numpy as np
+from pathlib import Path
 
 def take_log(df):
     # take log of data
@@ -11,6 +12,14 @@ def get_deltas(df):
     deltas = [vals[i+1] - vals[i] for i in range(len(vals)-1)]
     deltas.append(np.nan)
     df['Adj Close'] = deltas
+    
+    # touch processed data directory
+    try:
+        Path('./data/processed').mkdir()
+        print('Creating directory for processed data')
+    except FileExistsError:
+        print('Directory for processed data already exists')
+        
     df.to_csv('./data/processed/deltas.csv')
     #df.to_csv('../data/processed/deltas.csv')
     return df, deltas

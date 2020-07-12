@@ -7,6 +7,7 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
+from pathlib import Path
 
 from timeseries import wrangle
 from timeseries import fetch
@@ -22,6 +23,14 @@ def run_fetch_raw_data(ticker='GOOG'):
 
     logging.info('Fetching raw data from yfinance')
     
+    # touch raw data directory
+    try:
+        Path('./data/raw').mkdir()
+        print('Creating directory for raw data')
+    except FileExistsError:
+        print('Directory for raw data already exists')
+        
+    
     
     # Define Constants
     #TICKER = "GOOG"
@@ -32,6 +41,7 @@ def run_fetch_raw_data(ticker='GOOG'):
     OUTPUT_FILE_NAME = "raw.csv"
     #OUTPUT_FILE_PATH = "~/springboard1/capstone2/TimeSeries/data/raw/" + OUTPUT_FILE_NAME
     OUTPUT_FILE_PATH = "./data/raw/" + OUTPUT_FILE_NAME
+    #Path('OUTPUT_FILE_PATH').touch()
 
     # get all current google stock data
     stock_data = fetch.get_historical_data(TICKER, START, TODAY)
@@ -67,6 +77,13 @@ def run_format_timeseries():
         #df = create_future_days(df, col_name)
         return df
 
+    # touch interim data directory
+    try:
+        Path('./data/interim').mkdir()
+        print('Creating directory for interim data')
+    except FileExistsError:
+        print('Directory for interim data already exists')
+        
     time_series_df = create_time_series(log_scaled_adj_close, 'Adj Close')
     time_series_df.to_csv('./data/interim/time_series.csv')
     #time_series_df.to_csv('../data/interim/time_series.csv')

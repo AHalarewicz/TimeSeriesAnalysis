@@ -17,29 +17,48 @@ Description: # Time Series Analysis of Historical Stock Data
         With Time Series Analysis, a model must be evaluated on its ability to make predictions on data points corresponding to dates after any and all data points in the training set. With this approach, the Recurrent Neural Network is scored on its ability to correctly predict the direction of change in the stock's Adjusted Closing Price.
         
         
-        # COMMAND LINE INSTRUCTIONS for a Production Level approach.
-        ### 0. Install pip and create new virtual environment (Linux)
-              $ python3 -m pip install --user --upgrade pip
-              $ python3 -m pip install --user virtualenv
-              $ python3 -m venv env
-              $ source env/bin/activate
+        # COMMAND LINE INSTRUCTIONS for a Production Level approach (Linux).
         
-        ### 1. Navigate to the TimeSeries project directory and install project modules 
-              $ cd TimeSeries/
-              $ pip install -e .
+        ### 0. Make sure python 3.6 or greater is installed
+              $ python --version 
         
-        ### 2. Install project specific environment requirements 
+        ### 1. Download and install Anaconda
+              https://docs.anaconda.com/anaconda/install/linux/
+              
+        ### 2. Add 'conda' command to PATH.
+              $ export Path=~/anaconda3/bin:$PATH
+              
+        ### 3. Initialize Anaconda then close and restart the shell
+              $ conda init bash
+              
+        ### 4. Clone the TimeSeriesAnalysis project repository
+              $ git clone https://github.com/AHalarewicz/TimeSeriesAnalysis.git
+              
+        ### 5. Create and activate conda virtual environment
+              $ conda create --name tsenv python=3.6
+              $ conda activate ~/anaconda3/envs/tsenv
+              
+        ### 6. Install/upgrage pip to install requirements for the virtual environment
+              $ python3 -m pip install --user --upgrade pip  
+              
+        ### 7. Navigate to the TimeSeriesAnalysis project directory and install project modules 
+              $ cd TimeSeriesAnalysis/
+        
+        ### 8. Install project specific environment requirements 
               $ pip install -r requirements.txt
               
-        ### 3. Download historical stock data specific for the provided ticker.
+        ### 9. Install project modules
+              $ pip install -e .
+              
+        ### 10. Download historical stock data specific for the provided ticker.
               $ fetch_raw_data --ticker JPM
         
            Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
         
-        ### 4. Prepare the data and format for Time Series Analysis.
+        ### 11. Prepare the data and format for Time Series Analysis.
               $ format_timeseries
         
-        ### 5. Train the Recurrent Neural Network and predict tomorrow's change
+        ### 12. Train the Recurrent Neural Network and predict tomorrow's change
               $ predict_tomorrow
         
         Prediction will provided the expected change in price and insight about whether to Buy or Sell
@@ -108,10 +127,28 @@ Description: # Time Series Analysis of Historical Stock Data
         # Report and Presentation slides
         ### Formal written report:
             reports/Capstone 2_Final_Report.pdf
+            https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/reports/Capstone_2_Final_Report.pdf
             
         ### Presentation for technical audience
             reports/Capstone 2_Final_Presentation.pdf
+            https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/reports/Capstone%202_Final_Presentation.pdf
                 
+        # Important Files:
+        ### Collect and Format Data for Time Series Analysis
+              notebooks/data_wrangling.ipynb
+              https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/data_wrangling.ipynb
+              
+        ### Train RNN with LSTM Layers and Make Predictions (Regression)
+              notebooks/LSTM_predictions.ipynb
+              https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
+              
+        ### Train RNN with LSTM Layers and Make Predictions (Classification)
+              notebooks/LSTM_predictions.ipynb
+              https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
+             
+        ### Train RNN with Dense Layers and Make Predictions (Regression)
+              notebooks/LSTM_predictions.ipynb
+              https://github.com/AHalarewicz/TimeSeriesAnalysis/blob/master/notebooks/LSTM_predictions.ipynb
               
               
         
