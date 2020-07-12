@@ -23,6 +23,13 @@ def run_fetch_raw_data(ticker='GOOG'):
 
     logging.info('Fetching raw data from yfinance')
     
+    # touch data directory
+    try:
+        Path('./data').mkdir()
+        print('Data directory successfully created')
+    except:
+        print('Data Directory already exists')
+    
     # touch raw data directory
     try:
         Path('./data/raw').mkdir()
