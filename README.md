@@ -11,46 +11,45 @@ With Time Series Analysis, a model must be evaluated on its ability to make pred
 
 # COMMAND LINE INSTRUCTIONS for a Production Level approach (Linux).
 
-### 0. Make sure python 3.6 or greater is installed
-      $ python --version 
-
-### 1. Download and install Anaconda
-      https://docs.anaconda.com/anaconda/install/linux/
+### 0. Make sure python 3 is installed
+      $ python3 --version 
       
-### 2. Add 'conda' command to PATH.
-      $ export Path=~/anaconda3/bin:$PATH
+### 1. Install/upgrage pip 
+      $ python3 -m pip install --user --upgrade pip  
+      $ pip --version
       
-### 3. Initialize Anaconda then close and restart the shell
-      $ conda init bash
+### 2a. (option A) Create and activate virtual environment with 'virtualenv'
+      Choose Option B if you have already have anaconda installed
+      $ python3 -m pip install --user virtualenv
+      $ python3.7 -m venv tsenv
+            (if python3.7 is not recognize, follow this tutorial: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)ls
+      $ source tsenv/bin/activate
       
-### 4. Clone the TimeSeriesAnalysis project repository
-      $ git clone https://github.com/AHalarewicz/TimeSeriesAnalysis.git
-      
-### 5. Create and activate conda virtual environment
-      $ conda create --name tsenv python=3.6
+### 2b. (option B - THE BETTER OPTION) Create and activate virtual environment with 'conda'
+      $ conda create --name tsenv python=3.7
       $ conda activate ~/anaconda3/envs/tsenv
       
-### 6. Install/upgrage pip to install requirements for the virtual environment
-      $ python3 -m pip install --user --upgrade pip  
+### 3. Clone the TimeSeriesAnalysis project repository
+      $ git clone https://github.com/AHalarewicz/TimeSeriesAnalysis.git
       
-### 7. Navigate to the TimeSeriesAnalysis project directory and install project modules 
-      $ cd TimeSeriesAnalysis/
+### 4. Navigate to the TimeSeriesAnalysis project directory and install project modules 
+      $ cd TimeSeriesAnalysis
 
-### 8. Install project specific environment requirements 
+### 5. Install project specific environment requirements 
       $ pip install -r requirements.txt
       
-### 9. Install project modules
+### 6. Install project modules
       $ pip install -e .
       
-### 10. Download historical stock data specific for the provided ticker.
+### 7. Download historical stock data specific for the provided ticker.
       $ fetch_raw_data --ticker JPM
 
    Several other ticker symbols that work well with the model include [GE, XOM, BA, GOOG]
 
-### 11. Prepare the data and format for Time Series Analysis.
+### 8. Prepare the data and format for Time Series Analysis.
       $ format_timeseries
 
-### 12. Train the Recurrent Neural Network and predict tomorrow's change
+### 9. Train the Recurrent Neural Network and predict tomorrow's change
       $ predict_tomorrow
 
 Prediction will provided the expected change in price and insight about whether to Buy or Sell
@@ -59,7 +58,7 @@ Prediction will provided the expected change in price and insight about whether 
 ### To run all of the steps sequentially, simply run the make file.
       $ make prediction    
 
-Install requirements > Download and Format data > Train the model > Make Predictions     
+This will: Install requirements > Download and Format data > Train the model > Make Predictions     
 
 
 # Jupyter Notebooks
